@@ -7,7 +7,7 @@
 <!-- [word]="editWord" -->
 
 <ng-template #allHabits>
-  <app-list-words></app-list-words>
+  <app-list-words (addEvent)="onAdding()"></app-list-words>
 </ng-template>
-<!-- (addEvent)="onAdding()"
+<!-- 
     (editEvent)="onEditing($event)" -->

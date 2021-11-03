@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { WORDS } from '../data/Words';
 import { IWord } from '../models/IWord';
 
@@ -10,13 +10,18 @@ import { IWord } from '../models/IWord';
 export class ListWordsComponent implements OnInit {
   public words: IWord[];
 
+  @Output() addEvent = new EventEmitter();
+  @Output() editEvent = new EventEmitter<IWord>();
+
   constructor() {}
 
   ngOnInit() {
     this.words = WORDS;
   }
 
-  onAdd() {}
+  onAdd() {
+    this.addEvent.emit();
+  }
 
   onEdit(word) {}
 
