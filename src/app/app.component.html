@@ -1,0 +1,13 @@
+<app-toolbar></app-toolbar>
+
+<app-word-form
+  *ngIf="formOpen; else allHabits"
+  (onExit)="closeForm()"
+></app-word-form>
+<!-- [word]="editWord" -->
+
+<ng-template #allHabits>
+  <app-list-words></app-list-words>
+</ng-template>
+<!-- (addEvent)="onAdding()"
+    (editEvent)="onEditing($event)" -->

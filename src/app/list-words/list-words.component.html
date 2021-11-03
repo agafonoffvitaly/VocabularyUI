@@ -1,0 +1,35 @@
+<div class="all-words">
+  <button mat-raised-button color="primary" (click)="onAdd()">
+    Новое слово
+  </button>
+
+  <div *ngFor="let word of words; let i = index">
+    <mat-card>
+      <mat-card-title>
+        <mat-icon
+          class="word-icon"
+          color="accent"
+          aria-hidden="false"
+          aria-label="circle check mark icon"
+          >check_circle_outline</mat-icon
+        >
+        {{ word.value }}
+      </mat-card-title>
+      <div class="detail-options">
+        <mat-icon class="word-icon" color="primary" (click)="onEdit(word)"
+          >edit</mat-icon
+        >
+        <mat-icon class="word-icon" color="warn" (click)="onDelete(i)"
+          >remove_circle</mat-icon
+        >
+      </div>
+      <mat-card-content>
+        <p>
+          <span class="detail-label">Перевод:</span>
+          {{ word.translate }}
+        </p>
+        <p>{{ word.example[0] }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
