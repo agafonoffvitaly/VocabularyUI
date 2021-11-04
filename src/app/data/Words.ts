@@ -21,4 +21,22 @@ export const WORDS: IWord[] = [
     dateAdd: new Date(),
     countUse: 3,
   },
+  {
+    id: 3,
+    value: 'purposely',
+    translate: ['намеренно', 'нарочно', 'с целью'],
+    example: ['I am purposely jumping'],
+    image: '',
+    dateAdd: new Date(),
+    countUse: 1,
+  },
+  {
+    id: 4,
+    value: 'avoid',
+    translate: ['избегать', 'избежадь', 'уклоняться'],
+    example: ['I avoid you'],
+    image: '',
+    dateAdd: new Date(),
+    countUse: 1,
+  },
 ];
